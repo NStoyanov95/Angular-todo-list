@@ -1,0 +1,13 @@
+<div class="todolist">
+    <h3>List of Works Todo:</h3>
+    <p class="error-info"></p>
+    <ul *ngIf="data">
+        <li *ngFor="let item of data" >{{item.task}}
+            <div class="tools">
+                <button class="complete" (click)="completeHandler($event)">COMPLETE<i class="fas fa-check"></i></button>
+                <button class="edit">EDIT</button>
+                <button class="delete" >DELETE<i class="fas fa-times"></i></button>
+            </div>
+        </li>
+    </ul>
+</div>
