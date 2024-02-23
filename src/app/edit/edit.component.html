@@ -1,10 +1,10 @@
-<div class="popup">
+<div class="popup" [style.display]="display">
     <h3>Edit your todo:</h3>
     <div class="popup-body">
         <p class="popup-info"></p>
         <input type="text" class="popup-input"
-            placeholder="Wprowadź nową treść zadania...">
-        <button class="popup-btn accept">Update</button>
-        <button class="popup-btn cancel">Cancel</button>
+            placeholder="Wprowadź nową treść zadania..." value="{{task}}" #inputValue>
+        <button class="popup-btn accept" id="{{id}}" (click)="updateHandler($event, inputValue.value)">Update</button>
+        <button class="popup-btn cancel" (click)="cancelHandler()">Cancel</button>
     </div>
 </div>

@@ -2,11 +2,11 @@
     <h3>List of Works Todo:</h3>
     <p class="error-info"></p>
     <ul *ngIf="data">
-        <li *ngFor="let item of data" >{{item.task}}
+        <li *ngFor="let item of data"  id="{{item._id}}">{{item.task}}
             <div class="tools">
-                <button class="complete" (click)="completeHandler($event)">COMPLETE<i class="fas fa-check"></i></button>
-                <button class="edit">EDIT</button>
-                <button class="delete" >DELETE<i class="fas fa-times"></i></button>
+                <button class="complete" (click)="completeHandler($event)"><i class="fas fa-check"></i></button>
+                <button class="edit" (click)="editHandler($event)">EDIT</button>
+                <button class="delete" (click)="deleteHandler($event)"><i class="fas fa-times"></i></button>
             </div>
         </li>
     </ul>

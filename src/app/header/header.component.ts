@@ -9,14 +9,16 @@ import { DbArr } from '../DB/Task';
 })
 export class HeaderComponent {
 
-  getTask(event:Event,task: string){
-    DbArr.push({
-      _id: DbArr.length+1,
-      task
-    });
+  getTask(event: Event, task: string) {
+    if (task.length != 0) {
+      DbArr.push({
+        _id: DbArr.length + 1,
+        task
+      });
 
-    const  inputField = <HTMLInputElement>(<HTMLDivElement>(<HTMLButtonElement>event.target).parentElement).querySelector('.todo-input')
-    inputField.value = "";    
+    }
+    const inputField = <HTMLInputElement>(<HTMLDivElement>(<HTMLButtonElement>event.target).parentElement).querySelector('.todo-input')
+    inputField.value = "";
   }
 
 }
