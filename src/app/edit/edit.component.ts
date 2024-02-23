@@ -20,7 +20,10 @@ export class EditComponent {
     const id = Number(this.id);
     const matchIndex = this.data.findIndex(x => x._id == id);
 
-    this.data[matchIndex].task = inputValue
+    this.data[matchIndex].task = inputValue;
+        
+    this.display = 'none';
+
   }
 
   cancelHandler() {
